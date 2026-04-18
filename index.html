@@ -26,6 +26,7 @@
             --white: #FFFFFF;
             --text-dark: #2C2C2C;
             --text-light: #6B6B6B;
+            --black: #0a0a0a;
         }
 
         * {
@@ -671,68 +672,56 @@
             color: var(--gold-primary);
         }
 
-        /* Contact Section */
+        /* Contact Section - ENHANCED */
         .contact {
-            background: var(--cream);
+            background: var(--black);
+            color: var(--white);
+            position: relative;
         }
 
-        .contact-content {
+        .contact .section-title {
+            color: var(--white);
+        }
+
+        .contact .section-label {
+            color: var(--gold-light);
+        }
+
+        .contact-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
         }
 
-        .contact-info h3 {
+        .contact-left h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            color: var(--brown-dark);
+            font-size: 2.5rem;
             margin-bottom: 1.5rem;
+            line-height: 1.2;
         }
 
-        .contact-details {
-            margin-top: 2rem;
+        .contact-left h2 span {
+            color: var(--gold-primary);
         }
 
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
+        .contact-subtitle {
+            color: var(--gold-light);
+            font-size: 1.1rem;
             margin-bottom: 2rem;
+            font-style: italic;
         }
 
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            flex-shrink: 0;
+        .contact-description {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 2rem;
+            line-height: 1.8;
         }
 
-        .contact-text h4 {
-            color: var(--brown-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-text p, .contact-text a {
-            color: var(--text-light);
-            text-decoration: none;
-            line-height: 1.6;
-        }
-
-        .contact-text a:hover {
-            color: var(--gold-dark);
-        }
-
-        .contact-form {
+        .contact-form-modern {
             background: var(--white);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin-top: 2rem;
         }
 
         .form-group {
@@ -743,10 +732,11 @@
             display: block;
             margin-bottom: 0.5rem;
             color: var(--brown-dark);
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .form-group input,
+        .form-group select,
         .form-group textarea {
             width: 100%;
             padding: 1rem;
@@ -754,9 +744,11 @@
             border-radius: 10px;
             font-family: inherit;
             transition: border-color 0.3s;
+            font-size: 1rem;
         }
 
         .form-group input:focus,
+        .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: var(--gold-primary);
@@ -765,6 +757,200 @@
         .form-group textarea {
             resize: vertical;
             min-height: 120px;
+        }
+
+        .budget-estimator {
+            margin-top: 2rem;
+        }
+
+        .budget-estimator h4 {
+            color: var(--brown-dark);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .budget-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .budget-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: var(--cream);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .budget-option:hover {
+            background: var(--gold-light);
+        }
+
+        .budget-option input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: var(--gold-primary);
+        }
+
+        .budget-option label {
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 2rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Contact Right - Map */
+        .contact-right {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .map-container {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            height: 400px;
+            position: relative;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .map-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gold-primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+
+        .map-button:hover {
+            background: var(--gold-dark);
+            transform: translateY(-2px);
+        }
+
+        .contact-info-modern {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .contact-info-modern h3 {
+            color: var(--gold-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-item-modern {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item-modern:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon-modern {
+            width: 45px;
+            height: 45px;
+            background: var(--gold-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-text-modern h4 {
+            color: var(--gold-light);
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .contact-text-modern p, .contact-text-modern a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .contact-text-modern a:hover {
+            color: var(--gold-primary);
+        }
+
+        /* Social Media Icons */
+        .social-media-section {
+            margin-top: 2rem;
+        }
+
+        .social-media-section h4 {
+            color: var(--gold-light);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brown-dark);
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background: var(--gold-primary);
+            color: var(--white);
+            transform: translateY(-5px) rotate(360deg);
         }
 
         /* Floating WhatsApp */
@@ -785,6 +971,7 @@
             z-index: 999;
             transition: all 0.3s;
             animation: pulse 2s infinite;
+            text-decoration: none;
         }
 
         @keyframes pulse {
@@ -820,33 +1007,6 @@
         .footer-text {
             color: var(--cream);
             margin-bottom: 2rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-links a {
-            width: 45px;
-            height: 45px;
-            background: rgba(212, 175, 55, 0.2);
-            border: 2px solid var(--gold-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold-primary);
-            font-size: 1.2rem;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background: var(--gold-primary);
-            color: var(--brown-dark);
-            transform: translateY(-3px);
         }
 
         .footer-bottom {
@@ -909,7 +1069,7 @@
             }
 
             .about-content,
-            .contact-content {
+            .contact-wrapper {
                 grid-template-columns: 1fr;
             }
 
@@ -919,6 +1079,10 @@
 
             .section-title {
                 font-size: 2.5rem;
+            }
+
+            .contact-left h2 {
+                font-size: 2rem;
             }
         }
 
@@ -938,6 +1102,10 @@
 
             .about-features {
                 grid-template-columns: 1fr;
+            }
+
+            .contact-form-modern {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -971,7 +1139,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section dengan Background Gambar -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
             <p class="hero-subtitle">Traditional Javanese Beauty</p>
@@ -995,13 +1163,12 @@
     <!-- Ornamental Divider -->
     <div class="ornament jav-pattern"></div>
 
-    <!-- About Section dengan Gambar Utama -->
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-images fade-in">
                     <div class="about-img-main">
-                        <!-- GAMBAR UTAMA DARI IBBL -->
                         <img src="https://i.ibb.co.com/KjjYBZxH/images.jpg" alt="Sekar Arum - Rias Pengantin Jawa">
                     </div>
                     <div class="about-img-accent"></div>
@@ -1143,7 +1310,7 @@
         </div>
     </section>
 
-    <!-- Portfolio Section dengan Gambar Lengkap -->
+    <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-header fade-in">
@@ -1154,7 +1321,6 @@
                 </p>
             </div>
             <div class="portfolio-grid">
-                <!-- Portfolio Item 1 - Gambar Utama -->
                 <div class="portfolio-item fade-in">
                     <img src="https://i.ibb.co.com/KjjYBZxH/images.jpg" alt="Pengantin Jawa Tradisional">
                     <div class="portfolio-overlay">
@@ -1163,7 +1329,6 @@
                     </div>
                 </div>
                 
-                <!-- Portfolio Item 2 - Venue Pernikahan Jawa -->
                 <div class="portfolio-item fade-in">
                     <img src="https://i.ibb.co.com/Q3Y3NydP/venue-pernikahan-jawa-2.jpg" alt="Venue Pernikahan Jawa">
                     <div class="portfolio-overlay">
@@ -1172,7 +1337,6 @@
                     </div>
                 </div>
                 
-                <!-- Portfolio Item 3 - Lampu Dekorasi Pelaminan -->
                 <div class="portfolio-item fade-in">
                     <img src="https://i.ibb.co.com/7JW2NQkQ/Lampu-Dekorasi-Pelaminan-Bikin-Suasana-Semakin-Meriah-dan-Ceria.jpg" alt="Dekorasi Pelaminan">
                     <div class="portfolio-overlay">
@@ -1181,7 +1345,6 @@
                     </div>
                 </div>
                 
-                <!-- Portfolio Item 4 - Placeholder -->
                 <div class="portfolio-item fade-in">
                     <div class="portfolio-placeholder">
                         <i class="fas fa-image"></i>
@@ -1192,7 +1355,6 @@
                     </div>
                 </div>
                 
-                <!-- Portfolio Item 5 - Placeholder -->
                 <div class="portfolio-item fade-in">
                     <div class="portfolio-placeholder">
                         <i class="fas fa-image"></i>
@@ -1203,7 +1365,6 @@
                     </div>
                 </div>
                 
-                <!-- Portfolio Item 6 - Placeholder -->
                 <div class="portfolio-item fade-in">
                     <div class="portfolio-placeholder">
                         <i class="fas fa-image"></i>
@@ -1292,88 +1453,155 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section - ENHANCED WITH ALL FEATURES -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="section-label">Hubungi Kami</span>
+                <span class="section-label">Contact Us</span>
                 <h2 class="section-title">Konsultasi Gratis</h2>
-                <p class="section-subtitle">
-                    Silakan hubungi kami untuk konsultasi dan pemesanan jadwal
-                </p>
             </div>
-            <div class="contact-content">
-                <div class="contact-info fade-in">
-                    <h3>Mari Wujudkan Pernikahan Impian Anda</h3>
-                    <p>
-                        Jangan ragu untuk menghubungi kami. Kami siap membantu Anda tampil 
-                        cantik dan memukau di hari spesial Anda.
+            
+            <div class="contact-wrapper">
+                <!-- Left Side - Form -->
+                <div class="contact-left fade-in">
+                    <h2>Personal Consultant: <span>Mempersiapkan Pernikahan dari nol!</span></h2>
+                    <p class="contact-subtitle">Kamu tidak sendiri! Ceritakan impianmu pada Sekar Arum</p>
+                    <p class="contact-description">
+                        Dari persiapan budget, mental, sampai urusan dokumen administrasi, semua bakal kamu dapatkan 
+                        <strong>GRATIS</strong> dengan mengisi form ini:
                     </p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
+
+                    <form class="contact-form-modern" id="consultationForm">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="email@anda.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" id="nama" name="nama" placeholder="Nama lengkap Anda" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tanggal">Tanggal Rencana Pernikahan</label>
+                            <input type="date" id="tanggal" name="tanggal" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="layanan">Pilihan Layanan</label>
+                            <select id="layanan" name="layanan" required>
+                                <option value="">-- Pilih Layanan --</option>
+                                <option value="Paket Akad Nikah">Paket Akad Nikah</option>
+                                <option value="Paket Resepsi Jawa">Paket Resepsi Jawa</option>
+                                <option value="Paket Lengkap (Akad + Resepsi)">Paket Lengkap (Akad + Resepsi)</option>
+                                <option value="Prewedding Makeup">Prewedding Makeup</option>
+                                <option value="Paket Tunangan">Paket Tunangan</option>
+                                <option value="Makeup Wisuda">Makeup Wisuda</option>
+                                <option value="Makeup Pesta">Makeup Pesta</option>
+                            </select>
+                        </div>
+
+                        <div class="budget-estimator">
+                            <h4>Estimasi Budget Rias</h4>
+                            <div class="budget-options">
+                                <div class="budget-option">
+                                    <input type="checkbox" id="budget1" name="budget" value="< 3 Juta">
+                                    <label for="budget1">&lt; 3 Juta</label>
+                                </div>
+                                <div class="budget-option">
+                                    <input type="checkbox" id="budget2" name="budget" value="3 - 5 Juta">
+                                    <label for="budget2">3 - 5 Juta</label>
+                                </div>
+                                <div class="budget-option">
+                                    <input type="checkbox" id="budget3" name="budget" value="5 - 10 Juta">
+                                    <label for="budget3">5 - 10 Juta</label>
+                                </div>
+                                <div class="budget-option">
+                                    <input type="checkbox" id="budget4" name="budget" value="> 10 Juta">
+                                    <label for="budget4">&gt; 10 Juta</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-top: 1.5rem;">
+                            <label for="pesan">Pesan Tambahan</label>
+                            <textarea id="pesan" name="pesan" placeholder="Ceritakan kebutuhan dan impian pernikahan Anda..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fab fa-whatsapp"></i> Kirim via WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Side - Map & Info -->
+                <div class="contact-right fade-in">
+                    <!-- Google Maps -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1234567890123!2d109.7392!3d-6.9025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6574c5b8c8b8c9%3A0x8c8b8c8b8c8b8c8b!2sPagersari%2C%20Karangtengah%2C%20Kec.%20Subah%2C%20Kabupaten%20Batang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1234567890123!5m2!1sid!2sid"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <a href="https://maps.app.goo.gl/ogdJUWk1sDkrQAQ16" target="_blank" class="map-button">
+                        <i class="fas fa-external-link-alt"></i> Buka di Maps
+                    </a>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info-modern">
+                        <h3>Informasi Kontak</h3>
+                        
+                        <div class="contact-item-modern">
+                            <div class="contact-icon-modern">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            <div class="contact-text">
+                            <div class="contact-text-modern">
                                 <h4>Alamat</h4>
-                                <p>
-                                    Pagersari, Karangtengah, Kec. Subah<br>
-                                    Kabupaten Batang, Jawa Tengah 51262
-                                </p>
+                                <p>Pagersari, Karangtengah, Kec. Subah<br>Kabupaten Batang, Jawa Tengah 51262</p>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
+
+                        <div class="contact-item-modern">
+                            <div class="contact-icon-modern">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
-                            <div class="contact-text">
+                            <div class="contact-text-modern">
                                 <h4>Telepon / WhatsApp</h4>
-                                <p>
-                                    <a href="https://wa.me/62816798013">+62 816-798-013</a>
-                                </p>
+                                <p><a href="https://wa.me/62816798013">+62 816-798-013</a></p>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
+
+                        <div class="contact-item-modern">
+                            <div class="contact-icon-modern">
                                 <i class="fas fa-clock"></i>
                             </div>
-                            <div class="contact-text">
+                            <div class="contact-text-modern">
                                 <h4>Jam Operasional</h4>
-                                <p>
-                                    Senin - Minggu: 08.00 - 20.00 WIB<br>
-                                    (By Appointment)
-                                </p>
+                                <p>Senin - Minggu: 08.00 - 20.00 WIB<br>(By Appointment)</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="social-media-section">
+                            <h4>Follow Us</h4>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon" title="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="TikTok">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                                <a href="https://wa.me/62816798013" class="social-icon" title="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="contact-form fade-in">
-                    <form id="bookingForm">
-                        <div class="form-group">
-                            <label for="name">Nama Lengkap</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Nomor Telepon</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Pilihan Layanan</label>
-                            <input type="text" id="service" name="service" placeholder="Contoh: Paket Akad Nikah" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="date">Tanggal Acara</label>
-                            <input type="date" id="date" name="date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Pesan Tambahan</label>
-                            <textarea id="message" name="message" placeholder="Ceritakan kebutuhan Anda..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">
-                            <i class="fab fa-whatsapp"></i>
-                            Kirim via WhatsApp
-                        </button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -1386,12 +1614,6 @@
             <p class="footer-text">
                 Mewujudkan kecantikan alami dengan sentuhan tradisional Jawa yang elegan
             </p>
-            <div class="social-links">
-                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="https://wa.me/62816798013" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Rias Pengantin Sekar Arum. All Rights Reserved.</p>
                 <p style="margin-top: 0.5rem; font-size: 0.85rem;">
@@ -1451,21 +1673,30 @@
         window.addEventListener('load', fadeInOnScroll);
 
         // Form submission to WhatsApp
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service').value;
-            const date = document.getElementById('date').value;
-            const message = document.getElementById('message').value;
+            const email = document.getElementById('email').value;
+            const nama = document.getElementById('nama').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const layanan = document.getElementById('layanan').value;
+            const pesan = document.getElementById('pesan').value;
             
-            const whatsappMessage = `Halo Sekar Arum, saya ingin booking:%0A%0A` +
-                                   `Nama: ${name}%0A` +
-                                   `No. HP: ${phone}%0A` +
-                                   `Layanan: ${service}%0A` +
-                                   `Tanggal: ${date}%0A` +
-                                   `Pesan: ${message || '-'}%0A%0A` +
+            // Get selected budget
+            const budgetCheckboxes = document.querySelectorAll('input[name="budget"]:checked');
+            let budget = '';
+            budgetCheckboxes.forEach((checkbox) => {
+                budget += checkbox.value + ', ';
+            });
+            budget = budget.slice(0, -2); // Remove last comma
+            
+            const whatsappMessage = `Halo Sekar Arum, saya ingin konsultasi:%0A%0A` +
+                                   `📧 Email: ${email}%0A` +
+                                   `👤 Nama: ${nama}%0A` +
+                                   `📅 Tanggal Rencana: ${tanggal}%0A` +
+                                   `💄 Layanan: ${layanan}%0A` +
+                                   `💰 Estimasi Budget: ${budget || '-'}%0A` +
+                                   `💬 Pesan: ${pesan || '-'}%0A%0A` +
                                    `Mohon informasi lebih lanjut. Terima kasih.`;
             
             window.open(`https://wa.me/62816798013?text=${whatsappMessage}`, '_blank');
@@ -1481,6 +1712,20 @@
                     window.scrollTo({
                         top: offsetTop,
                         behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Budget checkbox - only allow one selection
+        const budgetCheckboxes = document.querySelectorAll('input[name="budget"]');
+        budgetCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    budgetCheckboxes.forEach(otherCheckbox => {
+                        if (otherCheckbox !== this) {
+                            otherCheckbox.checked = false;
+                        }
                     });
                 }
             });
