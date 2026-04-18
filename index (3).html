@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rias Pengantin Sekar Arum | Makeup Artist Profesional Batang</title>
+    <meta name="description" content="Jasa Rias Pengantin Profesional di Batang. Spesialis makeup pengantin Jawa tradisional & modern. Hub: 0816-798-013">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --gold-primary: #D4AF37;
+            --gold-dark: #B8941F;
+            --gold-light: #F4E8C1;
+            --brown-dark: #3E2723;
+            --brown-medium: #5D4037;
+            --cream: #FAF6F0;
+            --cream-dark: #F5EDE0;
+            --white: #FFFFFF;
+            --text-dark: #2C2C2C;
+            --text-light: #6B6B6B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--cream);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        /* Javanese Pattern Background */
+        .jav-pattern {
+            background-image: url("image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 15 L25 15 Z' fill='%23D4AF37' fill-opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .logo-text h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--brown-dark);
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        .logo-text span {
+            font-size: 0.75rem;
+            color: var(--gold-dark);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-primary);
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--gold-dark);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: var(--brown-dark);
+            transition: all 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            background: linear-gradient(135deg, rgba(62, 39, 35, 0.85), rgba(93, 64, 55, 0.85)), 
+                        url('https://i.ibb.co.com/KjjYBZxH/images.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10 L60 40 L90 50 L60 60 L50 90 L40 60 L10 50 L40 40 Z' fill='%23D4AF37' fill-opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--white);
+            z-index: 1;
+            padding: 2rem;
+            max-width: 900px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            animation: fadeInUp 1s ease 0.2s both;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-title span {
+            color: var(--gold-primary);
+            font-style: italic;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            color: var(--cream);
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--gold-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold-primary);
+            color: var(--brown-dark);
+        }
+
+        /* Ornamental Divider */
+        .ornament {
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+        }
+
+        .ornament::before {
+            content: '❧';
+            font-size: 2rem;
+            color: var(--gold-primary);
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        .ornament::after {
+            content: '❧';
+            font-size: 2rem;
+            color: var(--gold-primary);
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--brown-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--gold-primary), transparent);
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 2rem auto 0;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--white);
+            position: relative;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-images {
+            position: relative;
+        }
+
+        .about-img-main {
+            width: 100%;
+            height: 500px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+            background: var(--cream-dark);
+        }
+
+        .about-img-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .about-img-main:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-img-accent {
+            position: absolute;
+            width: 200px;
+            height: 250px;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            border-radius: 15px;
+            bottom: -30px;
+            right: -30px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .about-text h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--brown-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .about-text h3 span {
+            color: var(--gold-dark);
+            font-style: italic;
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gold-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-dark);
+        }
+
+        .feature-text {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* Services Section */
+        .services {
+            background: linear-gradient(to bottom, var(--cream), var(--white));
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--gold-primary), var(--gold-dark));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-image {
+            height: 250px;
+            background: linear-gradient(135deg, var(--gold-light), var(--cream-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--brown-dark);
+            margin-bottom: 1rem;
+        }
+
+        .service-content p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold-dark);
+            font-weight: 600;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            background: var(--white);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(135deg, var(--gold-light), var(--cream-dark));
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(62, 39, 35, 0.9), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-overlay h4 {
+            color: var(--gold-light);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-overlay p {
+            color: var(--cream);
+            font-size: 0.9rem;
+        }
+
+        .portfolio-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--gold-dark);
+            opacity: 0.3;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium));
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L35 25 L60 30 L35 35 L30 60 L25 35 L0 30 L25 25 Z' fill='%23D4AF37' fill-opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .testimonials .section-title {
+            color: var(--white);
+        }
+
+        .testimonials .section-label {
+            color: var(--gold-light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .testimonial-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--cream);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--gold-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--white);
+        }
+
+        .author-info h4 {
+            color: var(--gold-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info .stars {
+            color: var(--gold-primary);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--cream);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--brown-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-text h4 {
+            color: var(--brown-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-text p, .contact-text a {
+            color: var(--text-light);
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .contact-text a:hover {
+            color: var(--gold-dark);
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--brown-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--cream-dark);
+            border-radius: 10px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold-primary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--brown-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold-primary);
+        }
+
+        .footer-text {
+            color: var(--cream);
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(212, 175, 55, 0.2);
+            border: 2px solid var(--gold-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-primary);
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--gold-primary);
+            color: var(--brown-dark);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            padding-top: 2rem;
+            margin-top: 2rem;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0;
+                gap: 1.5rem;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                letter-spacing: 4px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Sekar Arum</h1>
+                    <span>Bridal Makeup</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#services">Layanan</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Testimoni</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section dengan Background Gambar -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-subtitle">Traditional Javanese Beauty</p>
+            <h1 class="hero-title">Sekar <span>Arum</span></h1>
+            <p class="hero-description">
+                Mewujudkan kecantikan alami Anda dengan sentuhan tradisional Jawa yang elegan. 
+                Profesional Makeup Artist untuk momen spesial pernikahan Anda.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/62816798013" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i>
+                    Konsultasi Gratis
+                </a>
+                <a href="#portfolio" class="btn btn-secondary">
+                    Lihat Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ornamental Divider -->
+    <div class="ornament jav-pattern"></div>
+
+    <!-- About Section dengan Gambar Utama -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-images fade-in">
+                    <div class="about-img-main">
+                        <!-- GAMBAR UTAMA DARI IBBL -->
+                        <img src="https://i.ibb.co.com/KjjYBZxH/images.jpg" alt="Sekar Arum - Rias Pengantin Jawa">
+                    </div>
+                    <div class="about-img-accent"></div>
+                </div>
+                <div class="about-text fade-in">
+                    <h3>Keindahan <span>Autentik</span> Pengantin Jawa</h3>
+                    <p>
+                        Sekar Arum adalah layanan makeup artist profesional yang mengkhususkan diri 
+                        dalam rias pengantin Jawa tradisional dan modern. Berlokasi di Batang, 
+                        Jawa Tengah, kami berkomitmen untuk menghadirkan kecantikan alami dengan 
+                        sentuhan artistik yang memukau.
+                    </p>
+                    <p>
+                        Dengan pengalaman bertahun-tahun dan pemahaman mendalam tentang budaya Jawa, 
+                        kami menghadirkan riasan yang tidak hanya indah secara visual tetapi juga 
+                        bermakna secara kultural.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span class="feature-text">Berpengalaman & Profesional</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span class="feature-text">Produk Premium & Aman</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span class="feature-text">Harga Kompetitif</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span class="feature-text">Konsultasi Gratis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Layanan Kami</span>
+                <h2 class="section-title">Paket Rias Pengantin</h2>
+                <p class="section-subtitle">
+                    Pilih paket yang sesuai dengan kebutuhan dan impian pernikahan Anda
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-image">
+                        <i class="fas fa-ring" style="color: var(--gold-dark); opacity: 0.5;"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Paket Akad Nikah</h3>
+                        <p>
+                            Riasan lengkap untuk acara akad nikah dengan sentuhan natural dan elegan. 
+                            Termasuk rias wajah, sanggul sederhana, dan busana akad.
+                        </p>
+                        <div class="service-price">Hubungi untuk harga</div>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-image">
+                        <i class="fas fa-crown" style="color: var(--gold-dark); opacity: 0.5;"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Paket Resepsi Jawa</h3>
+                        <p>
+                            Riasan pengantin Jawa lengkap dengan paes ageng, sanggul tradisional, 
+                            dan busana kemben atau kebaya. Tampil sempurna di hari bahagiamu.
+                        </p>
+                        <div class="service-price">Hubungi untuk harga</div>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-image">
+                        <i class="fas fa-camera" style="color: var(--gold-dark); opacity: 0.5;"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Prewedding Makeup</h3>
+                        <p>
+                            Makeup untuk sesi foto prewedding dengan hasil yang photogenic dan 
+                            tahan lama. Tersedia pilihan konsep tradisional atau modern.
+                        </p>
+                        <div class="service-price">Hubungi untuk harga</div>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-image">
+                        <i class="fas fa-heart" style="color: var(--gold-dark); opacity: 0.5;"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Paket Tunangan</h3>
+                        <p>
+                            Riasan elegan untuk acara lamaran atau tunangan. Tampil menawan 
+                            dengan makeup yang natural dan sophisticated.
+                        </p>
+                        <div class="service-price">Hubungi untuk harga</div>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-image">
+                        <i class="fas fa-graduation-cap" style="color: var(--gold-dark); opacity: 0.5;"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Makeup Wisuda</h3>
+                        <p>
+                            Riasan fresh dan natural untuk momen wisuda Anda. Tampil percaya 
+                            diri di hari kelulusan dengan makeup yang tahan lama.
+                        </p>
+                        <div class="service-price">Hubungi untuk harga</div>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-image">
+                        <i class="fas fa-glass-cheers" style="color: var(--gold-dark); opacity: 0.5;"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Makeup Pesta</h3>
+                        <p>
+                            Layanan makeup untuk berbagai acara pesta, kondangan, atau acara 
+                            formal lainnya. Tersedia paket untuk ibu-ibu dan remaja.
+                        </p>
+                        <div class="service-price">Hubungi untuk harga</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section dengan Gambar Lengkap -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Galeri</span>
+                <h2 class="section-title">Portfolio Karya</h2>
+                <p class="section-subtitle">
+                    Dokumentasi momen-momen indah yang telah kami rias
+                </p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 - Gambar Utama -->
+                <div class="portfolio-item fade-in">
+                    <img src="https://i.ibb.co.com/KjjYBZxH/images.jpg" alt="Pengantin Jawa Tradisional">
+                    <div class="portfolio-overlay">
+                        <h4>Pengantin Jawa Tradisional</h4>
+                        <p>Akad Nikah - Batang</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 - Venue Pernikahan Jawa -->
+                <div class="portfolio-item fade-in">
+                    <img src="https://i.ibb.co.com/Q3Y3NydP/venue-pernikahan-jawa-2.jpg" alt="Venue Pernikahan Jawa">
+                    <div class="portfolio-overlay">
+                        <h4>Venue Pernikahan Jawa</h4>
+                        <p>Resepsi - Dekorasi Tradisional</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 - Lampu Dekorasi Pelaminan -->
+                <div class="portfolio-item fade-in">
+                    <img src="https://i.ibb.co.com/7JW2NQkQ/Lampu-Dekorasi-Pelaminan-Bikin-Suasana-Semakin-Meriah-dan-Ceria.jpg" alt="Dekorasi Pelaminan">
+                    <div class="portfolio-overlay">
+                        <h4>Dekorasi Pelaminan</h4>
+                        <p>Lampu Hias Tradisional</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 - Placeholder -->
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-placeholder">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h4>Paes Ageng Lengkap</h4>
+                        <p>Resepsi - Pekalongan</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 - Placeholder -->
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-placeholder">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h4>Prewedding Outdoor</h4>
+                        <p>Concept: Traditional</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 - Placeholder -->
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-placeholder">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h4>Makeup Wisuda</h4>
+                        <p>Universitas - Semarang</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Testimoni</span>
+                <h2 class="section-title">Apa Kata Mereka</h2>
+                <p class="section-subtitle" style="color: var(--cream);">
+                    Ulasan dari klien yang telah mempercayakan momen spesialnya kepada kami
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">
+                        "Alhamdulillah, hasil makeupnya sangat memuaskan! Kak Sekar Arum sangat 
+                        profesional dan sabar menghadapi saya yang rewel. Makeupnya tahan lama 
+                        sampai malam. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AD</div>
+                        <div class="author-info">
+                            <h4>Ayu Dewi</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">
+                        "Sangat puas dengan hasil riasan Jawa tradisional. Detail paes-nya sangat 
+                        rapi dan sesuai dengan yang saya inginkan. Terima kasih Kak, sudah membuat 
+                        hari pernikahan saya sempurna!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RS</div>
+                        <div class="author-info">
+                            <h4>Rini Susanti</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">
+                        "Makeup prewedding saya hasilnya cantik banget! Natural tapi tetap 
+                        kelihatan di foto. Kakaknya juga ramah dan mudah diajak komunikasi. 
+                        Pasti bakal recommend ke temen-temen!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">FP</div>
+                        <div class="author-info">
+                            <h4>Fitriani Putri</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Hubungi Kami</span>
+                <h2 class="section-title">Konsultasi Gratis</h2>
+                <p class="section-subtitle">
+                    Silakan hubungi kami untuk konsultasi dan pemesanan jadwal
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h3>Mari Wujudkan Pernikahan Impian Anda</h3>
+                    <p>
+                        Jangan ragu untuk menghubungi kami. Kami siap membantu Anda tampil 
+                        cantik dan memukau di hari spesial Anda.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Alamat</h4>
+                                <p>
+                                    Pagersari, Karangtengah, Kec. Subah<br>
+                                    Kabupaten Batang, Jawa Tengah 51262
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telepon / WhatsApp</h4>
+                                <p>
+                                    <a href="https://wa.me/62816798013">+62 816-798-013</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Jam Operasional</h4>
+                                <p>
+                                    Senin - Minggu: 08.00 - 20.00 WIB<br>
+                                    (By Appointment)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form fade-in">
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Pilihan Layanan</label>
+                            <input type="text" id="service" name="service" placeholder="Contoh: Paket Akad Nikah" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Tanggal Acara</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan Tambahan</label>
+                            <textarea id="message" name="message" placeholder="Ceritakan kebutuhan Anda..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">
+                            <i class="fab fa-whatsapp"></i>
+                            Kirim via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Sekar Arum</div>
+            <p class="footer-text">
+                Mewujudkan kecantikan alami dengan sentuhan tradisional Jawa yang elegan
+            </p>
+            <div class="social-links">
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/62816798013" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rias Pengantin Sekar Arum. All Rights Reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+                    Pagersari, Karangtengah, Kec. Subah, Kabupaten Batang, Jawa Tengah
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/62816798013" class="whatsapp-float" title="Chat WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Fade in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll);
+
+        // Form submission to WhatsApp
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const message = document.getElementById('message').value;
+            
+            const whatsappMessage = `Halo Sekar Arum, saya ingin booking:%0A%0A` +
+                                   `Nama: ${name}%0A` +
+                                   `No. HP: ${phone}%0A` +
+                                   `Layanan: ${service}%0A` +
+                                   `Tanggal: ${date}%0A` +
+                                   `Pesan: ${message || '-'}%0A%0A` +
+                                   `Mohon informasi lebih lanjut. Terima kasih.`;
+            
+            window.open(`https://wa.me/62816798013?text=${whatsappMessage}`, '_blank');
+        });
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
