@@ -118,7 +118,7 @@
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
         .nav-menu a {
@@ -521,9 +521,163 @@
             font-weight: 600;
         }
 
+        /* PRICELIST SECTION - NEW */
+        .pricelist {
+            background: var(--white);
+            position: relative;
+        }
+
+        .pricelist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricelist-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .pricelist-card.featured {
+            border-color: var(--gold-primary);
+            transform: scale(1.05);
+        }
+
+        .pricelist-card.featured::before {
+            content: 'POPULER';
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--gold-primary);
+            color: var(--white);
+            padding: 5px 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transform: rotate(45deg);
+            z-index: 10;
+        }
+
+        .pricelist-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .pricelist-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .pricelist-header {
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .pricelist-header h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricelist-header .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .pricelist-header .price span {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .pricelist-body {
+            padding: 2rem;
+        }
+
+        .pricelist-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricelist-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--cream-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .pricelist-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricelist-features li i {
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+        }
+
+        .pricelist-features li.not-included {
+            color: var(--text-light);
+            text-decoration: line-through;
+        }
+
+        .pricelist-features li.not-included i {
+            color: #ccc;
+        }
+
+        .pricelist-btn {
+            width: 100%;
+            padding: 1rem;
+            background: transparent;
+            border: 2px solid var(--gold-primary);
+            color: var(--gold-dark);
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .pricelist-btn:hover {
+            background: var(--gold-primary);
+            color: var(--white);
+        }
+
+        .pricelist-card.featured .pricelist-btn {
+            background: var(--gold-primary);
+            color: var(--white);
+        }
+
+        .pricelist-card.featured .pricelist-btn:hover {
+            background: var(--gold-dark);
+        }
+
+        .pricelist-note {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: var(--cream);
+            border-radius: 10px;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .pricelist-note strong {
+            color: var(--gold-dark);
+        }
+
         /* Portfolio Section */
         .portfolio {
-            background: var(--white);
+            background: var(--cream);
         }
 
         .portfolio-grid {
@@ -1073,8 +1227,17 @@
                 grid-template-columns: 1fr;
             }
 
-            .services-grid {
+            .services-grid,
+            .pricelist-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .pricelist-card.featured {
+                transform: none;
+            }
+
+            .pricelist-card.featured:hover {
+                transform: translateY(-10px);
             }
 
             .section-title {
@@ -1107,6 +1270,10 @@
             .contact-form-modern {
                 padding: 1.5rem;
             }
+
+            .pricelist-header .price {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -1127,6 +1294,7 @@
                 <li><a href="#home">Beranda</a></li>
                 <li><a href="#about">Tentang</a></li>
                 <li><a href="#services">Layanan</a></li>
+                <li><a href="#pricelist">Harga</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#testimonials">Testimoni</a></li>
                 <li><a href="#contact">Kontak</a></li>
@@ -1153,8 +1321,8 @@
                     <i class="fab fa-whatsapp"></i>
                     Konsultasi Gratis
                 </a>
-                <a href="#portfolio" class="btn btn-secondary">
-                    Lihat Portfolio
+                <a href="#pricelist" class="btn btn-secondary">
+                    Lihat Harga
                 </a>
             </div>
         </div>
@@ -1310,6 +1478,159 @@
         </div>
     </section>
 
+    <!-- PRICELIST SECTION - NEW -->
+    <section class="pricelist" id="pricelist">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Investasi</span>
+                <h2 class="section-title">Daftar Harga Paket</h2>
+                <p class="section-subtitle">
+                    Pilih paket terbaik untuk momen spesial Anda dengan harga yang kompetitif
+                </p>
+            </div>
+
+            <div class="pricelist-grid">
+                <!-- Paket 1: Akad Nikah -->
+                <div class="pricelist-card fade-in">
+                    <div class="pricelist-header">
+                        <h3>Paket Akad Nikah</h3>
+                        <div class="price">Rp 2.500.000<span>/paket</span></div>
+                    </div>
+                    <div class="pricelist-body">
+                        <ul class="pricelist-features">
+                            <li><i class="fas fa-check-circle"></i> Rias wajah & leher</li>
+                            <li><i class="fas fa-check-circle"></i> Sanggul sederhana</li>
+                            <li><i class="fas fa-check-circle"></i> Busana akad (sewa)</li>
+                            <li><i class="fas fa-check-circle"></i> Aksesoris lengkap</li>
+                            <li><i class="fas fa-check-circle"></i> Touch up selama acara</li>
+                            <li><i class="fas fa-check-circle"></i> 1x sesi latihan makeup</li>
+                            <li class="not-included"><i class="fas fa-times-circle"></i> Dokumentasi</li>
+                        </ul>
+                        <a href="https://wa.me/62816798013?text=Saya%20tertarik%20dengan%20Paket%20Akad%20Nikah" class="pricelist-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paket 2: Resepsi Jawa (POPULER) -->
+                <div class="pricelist-card featured fade-in">
+                    <div class="pricelist-header">
+                        <h3>Paket Resepsi Jawa</h3>
+                        <div class="price">Rp 5.000.000<span>/paket</span></div>
+                    </div>
+                    <div class="pricelist-body">
+                        <ul class="pricelist-features">
+                            <li><i class="fas fa-check-circle"></i> Paes Ageng lengkap</li>
+                            <li><i class="fas fa-check-circle"></i> Sanggul tradisional Jawa</li>
+                            <li><i class="fas fa-check-circle"></i> Busana kemben/kebaya (sewa)</li>
+                            <li><i class="fas fa-check-circle"></i> Aksesoris pengantin Jawa</li>
+                            <li><i class="fas fa-check-circle"></i> Touch up unlimited</li>
+                            <li><i class="fas fa-check-circle"></i> 2x sesi latihan makeup</li>
+                            <li><i class="fas fa-check-circle"></i> Konsultasi gratis</li>
+                        </ul>
+                        <a href="https://wa.me/62816798013?text=Saya%20tertarik%20dengan%20Paket%20Resepsi%20Jawa" class="pricelist-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paket 3: Lengkap -->
+                <div class="pricelist-card fade-in">
+                    <div class="pricelist-header">
+                        <h3>Paket Lengkap</h3>
+                        <div class="price">Rp 7.500.000<span>/paket</span></div>
+                    </div>
+                    <div class="pricelist-body">
+                        <ul class="pricelist-features">
+                            <li><i class="fas fa-check-circle"></i> Rias Akad + Resepsi</li>
+                            <li><i class="fas fa-check-circle"></i> 2x ganti busana</li>
+                            <li><i class="fas fa-check-circle"></i> Paes Ageng + Modern</li>
+                            <li><i class="fas fa-check-circle"></i> Semua aksesoris included</li>
+                            <li><i class="fas fa-check-circle"></i> Touch up unlimited</li>
+                            <li><i class="fas fa-check-circle"></i> 3x sesi latihan makeup</li>
+                            <li><i class="fas fa-check-circle"></i> Free konsultasi & trial</li>
+                        </ul>
+                        <a href="https://wa.me/62816798013?text=Saya%20tertarik%20dengan%20Paket%20Lengkap" class="pricelist-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paket 4: Prewedding -->
+                <div class="pricelist-card fade-in">
+                    <div class="pricelist-header">
+                        <h3>Prewedding Makeup</h3>
+                        <div class="price">Rp 1.500.000<span>/sesi</span></div>
+                    </div>
+                    <div class="pricelist-body">
+                        <ul class="pricelist-features">
+                            <li><i class="fas fa-check-circle"></i> Makeup natural/glam</li>
+                            <li><i class="fas fa-check-circle"></i> Styling rambut</li>
+                            <li><i class="fas fa-check-circle"></i> 1x ganti busana</li>
+                            <li><i class="fas fa-check-circle"></i> Aksesoris included</li>
+                            <li><i class="fas fa-check-circle"></i> Tahan lama untuk foto</li>
+                            <li class="not-included"><i class="fas fa-times-circle"></i> Sewa busana</li>
+                            <li class="not-included"><i class="fas fa-times-circle"></i> Dokumentasi</li>
+                        </ul>
+                        <a href="https://wa.me/62816798013?text=Saya%20tertarik%20dengan%20Paket%20Prewedding" class="pricelist-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paket 5: Tunangan -->
+                <div class="pricelist-card fade-in">
+                    <div class="pricelist-header">
+                        <h3>Paket Tunangan</h3>
+                        <div class="price">Rp 1.800.000<span>/paket</span></div>
+                    </div>
+                    <div class="pricelist-body">
+                        <ul class="pricelist-features">
+                            <li><i class="fas fa-check-circle"></i> Makeup elegant & natural</li>
+                            <li><i class="fas fa-check-circle"></i> Styling rambut modern</li>
+                            <li><i class="fas fa-check-circle"></i> Aksesoris tunangan</li>
+                            <li><i class="fas fa-check-circle"></i> Touch up selama acara</li>
+                            <li><i class="fas fa-check-circle"></i> Konsultasi tema</li>
+                            <li class="not-included"><i class="fas fa-times-circle"></i> Sewa busana</li>
+                            <li class="not-included"><i class="fas fa-times-circle"></i> Dokumentasi</li>
+                        </ul>
+                        <a href="https://wa.me/62816798013?text=Saya%20tertarik%20dengan%20Paket%20Tunangan" class="pricelist-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paket 6: Wisuda & Pesta -->
+                <div class="pricelist-card fade-in">
+                    <div class="pricelist-header">
+                        <h3>Wisuda & Pesta</h3>
+                        <div class="price">Rp 800.000<span>/orang</span></div>
+                    </div>
+                    <div class="pricelist-body">
+                        <ul class="pricelist-features">
+                            <li><i class="fas fa-check-circle"></i> Makeup fresh & natural</li>
+                            <li><i class="fas fa-check-circle"></i> Styling rambut</li>
+                            <li><i class="fas fa-check-circle"></i> Tahan 8-10 jam</li>
+                            <li><i class="fas fa-check-circle"></i> Cocok untuk foto</li>
+                            <li><i class="fas fa-check-circle"></i> Produk premium</li>
+                            <li><i class="fas fa-check-circle"></i> Home service available</li>
+                            <li class="not-included"><i class="fas fa-times-circle"></i> Aksesoris</li>
+                        </ul>
+                        <a href="https://wa.me/62816798013?text=Saya%20tertarik%20dengan%20Paket%20Wisuda%20Pesta" class="pricelist-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricelist-note fade-in">
+                <strong>Catatan:</strong> Harga dapat berubah sesuai dengan kebutuhan dan lokasi acara. 
+                Hubungi kami untuk konsultasi gratis dan penawaran khusus. 
+                <br>✨ <strong>Diskon spesial</strong> untuk booking H-3 bulan! ✨
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
         <div class="container">
@@ -1453,7 +1774,7 @@
         </div>
     </section>
 
-    <!-- Contact Section - ENHANCED WITH ALL FEATURES -->
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header fade-in">
